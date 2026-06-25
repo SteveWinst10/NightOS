@@ -112,34 +112,36 @@
                 height: 100%;
                 background-color: aliceblue;
             }
-           
+            .shadow{
+                box-shadow: 2px 3px 3px rgba(0,0,0,128);
+            }
         </style>
     </head>
     <body>
     <main>
-        <div class="window" id="settings">
+        <div class="window shadow" id="settings">
             <div class="sidebar">
-                <div class="settings-item " id="color-settings">
+                <div class="settings-item shadow" id="color-settings">
                     <p>Windows</p>
                 </div>
-                <div class="settings-item setting-active " >
+                <div class="settings-item setting-active shadow" >
                     <p>Taskbar</p>
                 </div>
-                <div class="settings-item " >
+                <div class="settings-item shadow" >
                     <p>Wallpaper</p>
                 </div>
-                <div class="settings-item " >
+                <div class="settings-item shadow" >
                     <p>Theme</p>
                 </div>
             </div>
-            <div class="separator "></div>
+            <div class="separator shadow"></div>
 
             <div class="content">
             </div>
         </div>
     </main>
     <footer>
-        <div id="taskbar" >
+        <div id="taskbar" class="shadow">
                 <div class="icon-container">
                     <div class="icon">
                         <!-- "Setting icons created by gungyoga04 - Flaticon" -->

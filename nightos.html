@@ -30,19 +30,49 @@
             margin-left: auto;
             margin-right: auto;
 
-            opacity: 20%;
-            backdrop-filter: blur(100px) ;
+            backdrop-filter: blur(10px) ;
 
-            border: 5px solid rgb(241,241,241);
-            border-radius: 30px;
+            border: 3px solid rgba(231,231,231,0.2);
+            border-radius: 15px;
+
+        }
+        .icon{
+            height: 100%;
+            width: 100%;
+        }
+        .icon img{
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
         }
 
+        .icon-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            height: 100%;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
 <footer>
     <div id="taskbar">
-
+            <div class="icon-container">
+                <div class="icon">
+                    <!-- "Setting icons created by gungyoga04 - Flaticon" -->
+                    <img src="setting.png" alt="settings">
+                </div>
+                <div class="icon">
+                    <!-- "Setting icons created by gungyoga04 - Flaticon" -->
+                    <img src="setting.png" alt="settings">
+                </div>
+                <div class="icon">
+                    <!-- "Setting icons created by gungyoga04 - Flaticon" -->
+                    <img src="setting.png" alt="settings">
+                </div>
+            </div>
     </div>
 </footer>
 </body>

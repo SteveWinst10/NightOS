@@ -51,6 +51,8 @@
                 height: 100%;
                 width: 100%;
                 object-fit: contain;
+                user-select: none;
+                cursor: pointer;
             }
             .icon-container{
                 display: flex;
@@ -89,21 +91,21 @@
                 gap: 15px;
              
             }
-            .settings-item{
+            .settings-sidebar-option{
                 padding: 10px 12px;
                 width: 100%;
                 border: 2px solid aliceblue;
                 border-radius: 5px;
                 background-color: rgba(100,100,100,0.11);
             }
-            .setting-active{
+            .setting-sidebar-active{
                 background-color: rgba(255,255,255,1) !important;
             }
-            .settings-item:hover{
+            .settings-sidebar-option:hover{
                 background-color: rgba(211,211,211,0.2);
                 cursor: pointer;
             }
-            .setting-active p{
+            .setting-sidebar-active p{
                 color: black
             }
             .separator{
@@ -115,28 +117,81 @@
             .shadow{
                 box-shadow: 2px 3px 3px rgba(0,0,0,128);
             }
+            #windows-content,#wallpaper-content,#theme-content{
+                visibility: hidden;
+            }
+            .content{
+                margin-left: 10px;
+                margin-top: 15px;
+            }
+            .setting-item{
+                margin-top: 30px;
+                margin-left: 30px;
+            }
+            .checkbox-label{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                user-select: none;
+                cursor: pointer;
+                margin-bottom: 20px;
+                width: 100%;
+                max-width: 280px;
+            }
+            .dropdown{
+                border-radius: 5px;
+                background-color: rgba(200,200,200,0.61);
+            }
+            .glass{
+                background-color: rgba(0,0,0,0.5);
+                backdrop-filter: blur(10px) ;
+            }
         </style>
     </head>
     <body>
     <main>
         <div class="window shadow" id="settings">
             <div class="sidebar">
-                <div class="settings-item shadow" id="color-settings">
+                <div class="settings-sidebar-option shadow" id="color-settings">
                     <p>Windows</p>
                 </div>
-                <div class="settings-item setting-active shadow" >
+                <div class="settings-sidebar-option setting-sidebar-active shadow" >
                     <p>Taskbar</p>
                 </div>
-                <div class="settings-item shadow" >
+                <div class="settings-sidebar-option shadow" >
                     <p>Wallpaper</p>
                 </div>
-                <div class="settings-item shadow" >
+                <div class="settings-sidebar-option shadow" >
                     <p>Theme</p>
                 </div>
             </div>
             <div class="separator shadow"></div>
+            <div class="content" id="windows-content">
 
-            <div class="content">
+            </div>
+            <div class="content" id="taskbar-content">
+                <h3 class="setting-heading">Taskbar Behaviour :</h3>
+                <div class="setting-item">
+                    <form id="taskbar-options">
+                        <label class="checkbox-label"> Automatically hide taskbar
+                                <input type="checkbox" id="autoHide" name="hide" value="true">
+                        </label>
+                        <label class="checkbox-label">Taskbar alignment
+                            <select id="taskbarAlignment" class="dropdown glass" name="alignment">
+                                <option value="left">Left</option>
+                                <option value="center">Center</option>
+                                <option value="right">Right</option>
+                            </select>
+                            
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <div class="content" id="wallpaper-content">
+
+            </div>
+            <div class="content" id="theme-content">
+
             </div>
         </div>
     </main>
@@ -145,14 +200,14 @@
                 <div class="icon-container">
                     <div class="icon">
                         <!-- "Setting icons created by gungyoga04 - Flaticon" -->
-                        <img src="icons/setting.jpg" alt="settings">
+                        <img src="icons/setting.jpg" alt="settings" draggable="false">
                     </div>
                     <div class="icon">
                         <!--TODO: add info icon -->
-                        <img src="icons/setting.jpg" alt="settings">
+                        <img src="icons/setting.jpg" alt="settings" draggable="false">
                     </div>
                     <div class="icon">
-                        <img src="icons/setting.jpg" alt="settings">
+                        <img src="icons/setting.jpg" alt="settings" draggable="false">
                     </div>
                 </div>
         </div>

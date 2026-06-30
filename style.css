@@ -1,0 +1,138 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Google Sans";
+}
+body{
+    background-image: url("nightWP.jpg");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+#taskbar{
+    background-color : rgba(32, 34, 36, 0.2);
+    width: max-content;
+    padding: 0 3%;
+    height: 7%;
+
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    backdrop-filter: blur(10px) ;
+
+    border: 3px solid rgba(231,231,231,0.2);
+    border-radius: 15px;
+
+
+}
+.icon{
+    height: 100%;
+    width: 100%;
+}
+.icon img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    user-select: none;
+    cursor: pointer;
+}
+.icon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+}
+.window{
+    background-color: rgba(0,0,0,0.5) ;
+    height: 400px;
+    width: 500px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+
+    backdrop-filter: blur(10px);
+
+    border: 3px solid rgba(255,255,255,0.5) ;
+    border-radius: 15px;
+
+
+    display: flex;
+    overflow: hidden;
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 160px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-left: 15px;
+    gap: 15px;
+
+}
+.settings-sidebar-option{
+    padding: 10px 12px;
+    width: 100%;
+    border: 2px solid aliceblue;
+    border-radius: 5px;
+    background-color: rgba(100,100,100,0.11);
+}
+.setting-sidebar-active{
+    background-color: rgba(255,255,255,1) !important;
+}
+.settings-sidebar-option:hover{
+    background-color: rgba(211,211,211,0.2);
+    cursor: pointer;
+}
+.setting-sidebar-active p{
+    color: black
+}
+.separator{
+    margin-left: 0;
+    width: 2px;
+    height: 100%;
+    background-color: aliceblue;
+}
+.shadow{
+    box-shadow: 2px 3px 3px rgba(0,0,0,128);
+}
+#windows-content,#wallpaper-content,#theme-content{
+    visibility: hidden;
+}
+.content{
+    margin-left: 10px;
+    margin-top: 15px;
+}
+.setting-item{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.checkbox-label{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    user-select: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 280px;
+}
+.dropdown{
+    border-radius: 5px;
+    background-color: rgba(200,200,200,0.61);
+}
+.glass{
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px) ;
+}

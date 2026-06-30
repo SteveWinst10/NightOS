@@ -9,4 +9,5 @@ function updateTime() {
         timeText.innerHTML = `<pre>${timeStr}     ${dateStr}</pre>`;
     }
 }
+updateTime();
 setInterval(updateTime, 1000);
